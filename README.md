@@ -14,7 +14,7 @@ Below is an example how you can use HDF to ingest these Blobs into HBase directl
 Hortonworks Dataflow (HDF), can be used to visually design a flow whereby you can ingest from a directly continuously, add extra fields, compress, encrypt, hash and then store this data in HBase. Any application can then connect to HBase and retrieve these objects at high speed. For example, a document system, images for a website's catalog etc.
 
 Here is a high level overview of the flow (also attached as a template file at the end of this article):
-
+![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HDF-HBase-1.jpg "HDF Flow Design into HBase")
 
 
 Let's break this down, each step:
@@ -30,21 +30,21 @@ Let's break this down, each step:
 Also, one last processor which splits out from Base64EncodeContent to PutHBaseCell, which stores the actual file/object in HBase, also part of the column family.
 
 As an example, here is the output you can expect from a sample PDF file stored in HBase:
-
+![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HDF-HBase-5.JPG "Viewing HBase")
 
 
 For the HBase processors, you will need to configure a controller service to define where your Zookeeper is in order to find your HBase servers.
 
 PutHBaseCell:
-
+![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HDF-HBase-3.jpg "Configuring PutHBaseCell")
 
 
 Which in turn points to the controller service (HBase_1_1_2_ClientService):
-
+![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HDF-HBase-2.jpg "Configuring HBase Controller Service")
 
 
 Additionally, here is an example to read the same objects from HBase, and store them back to the file system:
-
+![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HDF-HBase-4.jpg "Reading back from HBase")
 
 
 As you can see, it's pretty much the reverse when writing to HBase initially:
@@ -54,4 +54,4 @@ As you can see, it's pretty much the reverse when writing to HBase initially:
 * Decompress
 * Write to disk, with the original filename
 
-Have a look at the attached hbasewriteexample.xml template, which you can import into your HDF environment to play with.
+Have a look at the attached ![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HBaseWriteExample.xml "hbasewriteexample.xml") template, which you can import into your HDF environment to play with.
