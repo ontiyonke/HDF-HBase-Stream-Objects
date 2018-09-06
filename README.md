@@ -36,6 +36,7 @@ As an example, here is the output you can expect from a sample PDF file stored i
 For the HBase processors, you will need to configure a controller service to define where your Zookeeper is in order to find your HBase servers.
 
 PutHBaseCell:
+
 ![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HDF-HBase-3.jpg "Configuring PutHBaseCell")
 
 
