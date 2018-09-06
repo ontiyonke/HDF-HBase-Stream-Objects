@@ -1,4 +1,4 @@
-# Short Description:
+# Introduction:
 
 Often times there will be a need to ingest binary files to Hadoop (like PDF, JPG, PNG) where you will want to store them in HBase directly and not on HDFS itself. This article describes an example how this could be achieved.
 
