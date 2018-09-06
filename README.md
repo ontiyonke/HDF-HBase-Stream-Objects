@@ -54,4 +54,4 @@ As you can see, it's pretty much the reverse when writing to HBase initially:
 * Decompress
 * Write to disk, with the original filename
 
-Have a look at the attached ![alt text](https://github.com/willie-engelbrecht/HDF-HBase-Stream-Objects/blob/master/HBaseWriteExample.xml "hbasewriteexample.xml") template, which you can import into your HDF environment to play with.
+Have a look at the attached hbasewriteexample.xml template, which you can import into your HDF environment to play with.
